@@ -1,0 +1,8 @@
+Algorithme lireNombre
+Variable
+ 	a: entier
+Début
+	Afficher('Entrez un nombre: ')
+	saisir(a)
+	Afficher('a = ', a)
+Fin
