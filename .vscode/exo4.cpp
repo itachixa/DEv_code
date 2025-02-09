@@ -1,31 +1,31 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
-class Point {
+class Point_584 {
     public:
-    double x;
-    double y;
+    double x_584;
+    double y_584;
 };
 
-    double Distance ( Point p1,Point p2){
-        return sqrt(pow((p2.x-p1.x),2) +pow((p2.y-p1.y),2)) ;
+    double Distance ( Point_584 p1,Point_584 p2){
+        return sqrt(pow((p2.x_584-p1.x_584),2) +pow((p2.y_584-p1.y_584),2)) ;
 
     
 };
 int main(){
-    Point P1;
-    Point P2; 
+    Point_584 P1_584;
+    Point_584 P2_584; 
     cout << "Input the latitude of coordinte 1: ";
-    cin>>P1.x;
+    cin>>P1_584.x_584;
 
     cout << "Input the longitude of coordinte 1: ";
-    cin>>P1.y;
+    cin>>P1_584.y_584;
 
     cout << "Input the latitude of coordinte 2: ";
-    cin >> P2.x;
+    cin >> P2_584.x_584;
 
     cout << "Input the longitude of coordinte 2: ";
-    cin>>P2.y;
+    cin>>P2_584.y_584;
 
-    cout<<"The distance between those points is:" <<Distance(P1,P2)<<endl;
+    cout<<"The distance between those Point_584s is:" <<Distance(P1_584,P2_584)<<endl;
 }

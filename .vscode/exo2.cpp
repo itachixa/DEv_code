@@ -1,72 +1,69 @@
 #include <iostream>
-# include <iomanip>
+#include <iomanip>
 using namespace std;
-class  Nombre
+class Nombre_584
 {
 public:
-     double a;
-     double b;
+  double a_584;
+  double b_584;
 
-     void  set(double x, double y){
-       a=x;
-       b=y;
-     }
-     double getA(){
-        return a;
-     }
-      double getB(){
-        return b;
-     }
+  void set_584(double x, double y)
+  {
+    a_584 = x;
+    b_584 = y;
+  }
+  double getA_584()
+  {
+    return a_584;
+  }
+  double getB_584()
+  {
+    return b_584;
+  }
 
-     double Adittion(){
-       return a+b; 
-     }
-    double Soustrqction(){
-       return a-b; 
-     }
-     double Multiplication(){
-       return a*b; 
-     }
+  double Adittion_584()
+  {
+    return a_584 + b_584;
+  }
+  double Soustraction_584()
+  {
+    return a_584 - b_584;
+  }
+  double Multiplication_584()
+  {
+    return a_584 * b_584;
+  }
 };
 
-int  main (){
-   Nombre nb;
-   nb.set(5,7);
-   cout << nb.a << " + "<< nb.b << " = "<<nb.Adittion() <<endl;
+int main()
+{
+  Nombre_584 nb_584;
+  nb_584.set_584(5, 7);
+  cout << nb_584.a_584 << " + " << nb_584.b_584 << " = " << nb_584.Adittion_584() << endl;
 
-   nb.set(3.7,8.0);
-   cout << nb.a << " + "<< fixed << setprecision(1) << nb.b << " = "<<nb.Adittion()<<endl;
-   
-   cout<<setprecision(0);
-   nb.set(5,8.0);
-   cout << nb.a << " + "<< fixed << setprecision(1) << nb.b << " = "<<  nb.Adittion()<<endl;
-   cout<<setprecision(0);
+  nb_584.set_584(3.7, 8.0);
+  cout << nb_584.a_584 << " + " << fixed << setprecision(1) << nb_584.b_584 << " = " << nb_584.Adittion_584() << endl;
 
-   nb.set(5,7);
-   cout << nb.a << " - "<< nb.b << " = "<<nb.Soustrqction()<<endl;
-   cout<<setprecision(0);
+  cout << setprecision(0);
+  nb_584.set_584(5, 8.0);
+  cout << nb_584.a_584 << " + " << fixed << setprecision(1) << nb_584.b_584 << " = " << nb_584.Adittion_584() << endl;
+  cout << setprecision(0);
 
-   nb.set(3.7,8.0);
-   cout <<  fixed << setprecision(1) << nb.a << " - "<< nb.b << " = "<< fixed << setprecision(1) <<nb.Soustrqction()<<endl;
-   cout<<setprecision(0);
+  nb_584.set_584(5, 7);
+  cout << nb_584.a_584 << " - " << nb_584.b_584 << " = " << nb_584.Soustraction_584() << endl;
+  cout << setprecision(0);
 
-   nb.set(5,8.0);
-   cout << nb.a << " - "<<fixed << setprecision(1) <<nb.b << " = " <<nb.Soustrqction()<<endl;
-   cout<<setprecision(0);
+  nb_584.set_584(3.7, 8.0);
+  cout << fixed << setprecision(1) << nb_584.a_584 << " - " << nb_584.b_584 << " = " << fixed << setprecision(1) << nb_584.Soustraction_584() << endl;
+  cout << setprecision(0);
 
-   nb.set(5,7);
-   cout << nb.a << " * "<< nb.b << " = "<<nb.Multiplication()<<endl;
+  nb_584.set_584(5, 8.0);
+  cout << nb_584.a_584 << " - " << fixed << setprecision(1) << nb_584.b_584 << " = " << nb_584.Soustraction_584() << endl;
+  cout << setprecision(0);
 
-   nb.set(3.7,8.0);
-   cout << fixed << setprecision(1) << nb.a << " * "<< nb.b << " = "<< nb.Multiplication()<<endl;
+  nb_584.set_584(5, 7);
+  cout << nb_584.a_584 << " * " << nb_584.b_584 << " = " << nb_584.Multiplication_584() << endl;
 
-
-   
-
-
-
-
-    
+  nb_584.set_584(3.7, 8.0);
+  cout << fixed << setprecision(1) << nb_584.a_584 << " * " << nb_584.b_584 << " = " << nb_584.Multiplication_584() << endl;
 }
-   
-
