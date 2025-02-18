@@ -3,86 +3,86 @@
 
 using namespace std;
 
-class MovieTicket {
+class MovieTicket_584 {
 private:
-    string movieName;
-    string seatNumber;
-    double price;
-    bool isBooked;
+    string movieName_584;
+    string seatNumber_584;
+    double price_584;
+    bool isBooked_584;
 
 public:
-    // Constructor to initialize the ticket details
-    MovieTicket(string movie, string seat, double cost) {
-        movieName = movie;
-        seatNumber = seat;
-        price = cost;
-        isBooked = false; // Initially, the ticket is not booked
+   
+    MovieTicket_584(string movie_584, string seat_584, double cost_584) {
+        movieName_584 = movie_584;
+        seatNumber_584 = seat_584;
+        price_584 = cost_584;
+        isBooked_584 = false; 
     }
 
-    // Function to book a ticket
-    void bookTicket() {
-        if (!isBooked) {
-            isBooked = true;
-            cout << "Ticket for '" << movieName << "', Seat " << seatNumber << " has been successfully booked.\n";
+   
+    void bookTicket_584() {
+        if (!isBooked_584) {
+            isBooked_584 = true;
+            cout << "Ticket for '" << movieName_584 << "', Seat " << seatNumber_584 << " has been successfully booked.\n";
         } else {
-            cout << "Seat " << seatNumber << " is already booked.\n";
+            cout << "Seat " << seatNumber_584 << " is already booked.\n";
         }
     }
 
-    // Function to cancel a booked ticket
-    void cancelTicket() {
-        if (isBooked) {
-            isBooked = false;
-            cout << "Booking for '" << movieName << "', Seat " << seatNumber << " has been canceled.\n";
+    
+    void cancelTicket_584() {
+        if (isBooked_584) {
+            isBooked_584 = false;
+            cout << "Booking for '" << movieName_584 << "', Seat " << seatNumber_584 << " has been canceled.\n";
         } else {
-            cout << "Seat " << seatNumber << " is not booked yet.\n";
+            cout << "Seat " << seatNumber_584 << " is not booked yet.\n";
         }
     }
 
-    // Function to display ticket details
-    void displayTicketDetails() const {
-        cout << "Movie: " << movieName << endl;
-        cout << "Seat Number: " << seatNumber << endl;
-        cout << "Price: $" << price << endl;
-        cout << "Status: " << (isBooked ? "Booked" : "Available") << endl;
+   
+    void displayTicketDetails_584() const {
+        cout << "Movie: " << movieName_584 << endl;
+        cout << "Seat Number: " << seatNumber_584 << endl;
+        cout << "Price: $" << price_584 << endl;
+        cout << "Status: " << (isBooked_584 ? "Booked" : "Available") << endl;
         cout << "------------------------------------\n";
     }
 
-    // Destructor to display a message when a ticket object is deleted
-    ~MovieTicket() {
-        cout << "Ticket object for Seat " << seatNumber << " is being deleted.\n";
+    
+    ~MovieTicket_584() {
+        cout << "Ticket object for Seat " << seatNumber_584 << " is being deleted.\n";
     }
 };
 
-// Main function to demonstrate ticket booking and cancellation
+
 int main() {
-    // Creating multiple ticket objects
-    MovieTicket ticket1("Inception", "A1", 10.50);
-    MovieTicket ticket2("Inception", "A2", 10.50);
-    MovieTicket ticket3("Inception", "A3", 10.50);
+
+    MovieTicket_584 ticket1_584("Inception", "A1", 10.50);
+    MovieTicket_584 ticket2_584("Inception", "A2", 10.50);
+    MovieTicket_584 ticket3_584("Inception", "A3", 10.50);
 
     // Display initial ticket details
-    ticket1.displayTicketDetails();
-    ticket2.displayTicketDetails();
-    ticket3.displayTicketDetails();
+    ticket1_584.displayTicketDetails_584();
+    ticket2_584.displayTicketDetails_584();
+    ticket3_584.displayTicketDetails_584();
 
-    // Booking tickets
-    ticket1.bookTicket();
-    ticket2.bookTicket();
 
-    // Attempt to book an already booked ticket
-    ticket1.bookTicket();
+    ticket1_584.bookTicket_584();
+    ticket2_584.bookTicket_584();
 
-    // Cancel a ticket
-    ticket2.cancelTicket();
+   
+    ticket1_584.bookTicket_584();
 
-    // Attempt to cancel a ticket that is not booked
-    ticket3.cancelTicket();
+    
+    ticket2_584.cancelTicket_584();
 
-    // Display final ticket details
-    ticket1.displayTicketDetails();
-    ticket2.displayTicketDetails();
-    ticket3.displayTicketDetails();
+   
+    ticket3_584.cancelTicket_584();
+
+    
+    ticket1_584.displayTicketDetails_584();
+    ticket2_584.displayTicketDetails_584();
+    ticket3_584.displayTicketDetails_584();
 
     return 0;
 }

@@ -3,53 +3,53 @@
 
 using namespace std;
 
-class Employee {
+class Employee_584 {
 private:
-    int empID;
-    string name;
-    double salary;
-    string designation;
+    int empID_584;
+    string name_584;
+    double salary_584;
+    string designation_584;
 
 public:
-    // Parameterized Constructor
-    Employee(int id, string empName, double empSalary, string empDesignation) {
-        empID = id;
-        name = empName;
-        salary = empSalary;
-        designation = empDesignation;
+    
+    Employee_584(int id_584, string empName_584, double empSalary_584, string empDesignation_584) {
+        empID_584 = id_584;
+        name_584 = empName_584;
+        salary_584 = empSalary_584;
+        designation_584 = empDesignation_584;
     }
 
-    // Copy Constructor
-    Employee(const Employee &emp) {
-        empID = emp.empID;
-        name = emp.name;
-        salary = emp.salary;
-        designation = emp.designation;
+  
+    Employee_584(const Employee_584 &emp_584) {
+        empID_584 = emp_584.empID_584;
+        name_584 = emp_584.name_584;
+        salary_584 = emp_584.salary_584;
+        designation_584 = emp_584.designation_584;
     }
 
-    // Function to display Employee details
-    void displayDetails() {
-        cout << "Employee ID: " << empID << endl;
-        cout << "Name: " << name << endl;
-        cout << "Salary: $" << salary << endl;
-        cout << "Designation: " << designation << endl;
+   
+    void displayDetails_584() {
+        cout << "Employee ID: " << empID_584 << endl;
+        cout << "Name: " << name_584 << endl;
+        cout << "Salary: $" << salary_584 << endl;
+        cout << "Designation: " << designation_584 << endl;
         cout << "-----------------------------" << endl;
     }
 };
 
 int main() {
-    // Creating Employee E1 using the parameterized constructor
-    Employee E1(101, "John Doe", 50000, "Software Engineer");
+    
+    Employee_584 E1_584(101, "John Doe", 50000, "Software Engineer");
 
-    // Creating Employee E2 using the copy constructor (copy of E1)
-    Employee E2 = E1;
+    
+    Employee_584 E2_584 = E1_584;
 
-    // Display details of both employees
+    
     cout << "Employee 1 Details:" << endl;
-    E1.displayDetails();
+    E1_584.displayDetails_584();
 
     cout << "Employee 2 (Copy of E1) Details:" << endl;
-    E2.displayDetails();
+    E2_584.displayDetails_584();
 
     return 0;
 }
