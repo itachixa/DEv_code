@@ -2,53 +2,54 @@
 #include <vector>
 using namespace std;
 
-class Counter {
-public:
-    int value;
-    
-    Counter(int val) : value(val) {}
-
-    Counter& operator++() {  
-        ++value;  
-        return *this;  
-    }
-
-    Counter operator++(int) {  
-        Counter temp = *this;  // Save the current state
-        value++;  
-        return temp;  // Return original value before incrementing
-    }
-};
-
 int main() {
-
-
-
-
-
-
     // Example 1: Pre-increment
     int x = 5;
     int y = ++x; 
-    cout << "x = " << x << ", y = " << y  << endl;
-
-
 
 
 
 
 
    
-    
     // Example 2: Post-increment
-    x = 5;
-    int z = x++; // x is assigned to z first, then incremented
-    cout << "x = " << x << ", z = " << z << " (x was used first, then incremented)" << endl;
+    int a = 5;
+    int b = a++; 
 
 
 
 
 
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    cout << "=========================================\n";
+    cout << "         Pre-Increment (++x)             \n";
+    cout << "=========================================\n";
+    cout << "Before increment: x = 5\n";
+    cout << "After increment:  x = " << x << ", y = " << y << endl;
+    cout << "-----------------------------------------\n\n";
+
+
+    cout << "=========================================\n";
+    cout << "         Post-Increment (x++)            \n";
+    cout << "=========================================\n";
+    cout << "Before increment: a = 5\n";
+    cout << "After increment:  a = " << x << ", b = " << b << endl;
+    cout << "-----------------------------------------\n";
+
+    return 0;
 }
