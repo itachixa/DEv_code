@@ -19,8 +19,8 @@ class vehicule{
   void dispay(){
     cout<< "le prix est :"<< prix;
   };
- 
- };
+
+};
 class voiture: public vehicule {
   public:
   voiture(string m,double pri,string n)
@@ -29,7 +29,7 @@ class voiture: public vehicule {
   void dispay(){
     cout<< "le prix est :"<< prix;
   }
- };
+};
 
 int main(){
     // acces for public attribut
@@ -42,6 +42,6 @@ int main(){
     // acces for private function
     voiture V12("voiture",24,"toyota");
     V12.dispay();
-   
+
 
 }
