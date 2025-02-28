@@ -1,102 +1,78 @@
 #include <iostream>
 using namespace std;
 
-// Base class 1: ElectricVehicle
-class ElectricVehicle {
-protected:
-    double batteryCapacity; // kWh
+class ElectricVehicle_584 {
+    public:
+    double batteryCapacity_584;
 
-public:
-    ElectricVehicle(double battery) : batteryCapacity(battery) {}
-
-    void chargeBattery(double amount) {
-        batteryCapacity += amount;
-        cout << "🔋 Battery charged by " << amount << " kWh | Battery Capacity: " << batteryCapacity << " kWh" << endl;
+    public:
+    void chargeBattery_584(double amount_584) {
+        batteryCapacity_584 += amount_584;
     }
-
-    double getBatteryCapacity() const { return batteryCapacity; }
 };
 
-// Base class 2: FuelVehicle
-class FuelVehicle {
-protected:
-    double fuelCapacity; // Liters
+class FuelVehicle_584 {
+    public:
+    double fuelCapacity_584;
 
-public:
-    FuelVehicle(double fuel) : fuelCapacity(fuel) {}
-
-    void refuel(double amount) {
-        fuelCapacity += amount;
-        cout << "⛽ Refueled " << amount << "L | Fuel Capacity: " << fuelCapacity << "L" << endl;
+    public:
+    void refuel_584(double amount_584) {
+        fuelCapacity_584 += amount_584;
     }
-
-    double getFuelCapacity() const { return fuelCapacity; }
 };
 
-// Derived class: HybridCar (inherits from ElectricVehicle & FuelVehicle)
-class HybridCar : public ElectricVehicle, public FuelVehicle {
-private:
-    string mode; // "Electric" or "Fuel"
+class HybridCar_584 : public ElectricVehicle_584, public FuelVehicle_584 {
+    public:
+    string mode_584;
 
-public:
-    HybridCar(double battery, double fuel, string initialMode)
-        : ElectricVehicle(battery), FuelVehicle(fuel), mode(initialMode) {}
-
-    void switchMode(string newMode) {
-        if (newMode == "Electric" || newMode == "Fuel") {
-            mode = newMode;
-            cout << "🚗 Mode switched to: " << mode << endl;
-        } else {
-            cout << "❌ Invalid mode! Use 'Electric' or 'Fuel'." << endl;
-        }
+    public:
+    HybridCar_584(double battery_584, double fuel_584, string mod_584) {
+        batteryCapacity_584 = battery_584;
+        fuelCapacity_584 = fuel_584;
+        mode_584 = mod_584;
     }
 
-    void drive(double distance) {
-        cout << "🚘 Driving " << distance << " km in " << mode << " mode..." << endl;
-
-        if (mode == "Electric") {
-            double energyUsed = (distance * 0.2); // 0.2 kWh/km
-            if (batteryCapacity >= energyUsed) {
-                batteryCapacity -= energyUsed;
-                cout << "🔋 Battery used: " << energyUsed << " kWh | Remaining: " << batteryCapacity << " kWh" << endl;
+    public:
+    void drive_584(double distance_584) {
+        if (mode_584 == "Electric") {
+            if (batteryCapacity_584 < distance_584) {
+                batteryCapacity_584 = (distance_584 - (distance_584 - batteryCapacity_584));
+                cout << "You have already traveled " << (distance_584 - (distance_584 - batteryCapacity_584)) 
+                     << " km, stop here and continue. You have " << distance_584 - batteryCapacity_584 << " km left.\n";
             } else {
-                cout << "❌ Not enough battery! Please charge." << endl;
+                batteryCapacity_584 -= distance_584;
+                cout << "Nice! You arrived, and you have " << batteryCapacity_584 << " kW left.\n";
             }
-        } else if (mode == "Fuel") {
-            double fuelUsed = (distance * 0.05); // 0.05 L/km
-            if (fuelCapacity >= fuelUsed) {
-                fuelCapacity -= fuelUsed;
-                cout << "⛽ Fuel used: " << fuelUsed << " L | Remaining: " << fuelCapacity << " L" << endl;
+        } else if (mode_584 == "Fuel") {
+            if (fuelCapacity_584 < distance_584) {
+                fuelCapacity_584 = (distance_584 - (distance_584 - fuelCapacity_584));
+                cout << "You have already traveled " << (distance_584 - (distance_584 - fuelCapacity_584)) 
+                     << " km, stop here and continue. You have " << distance_584 - fuelCapacity_584 << " km left.\n";
             } else {
-                cout << "❌ Not enough fuel! Please refuel." << endl;
+                fuelCapacity_584 -= distance_584;
+                cout << "Nice! You arrived, and you have " << fuelCapacity_584 << " liters left.\n";
             }
         }
     }
 
-    void displayStatus() const {
-        cout << "🔋 Battery: " << batteryCapacity << " kWh | ⛽ Fuel: " << fuelCapacity << " L | 🚗 Mode: " << mode << endl;
+    void switchMode_584(string newMode_584) {
+        mode_584 = newMode_584;
+    }
+
+    void display_584() {
+        cout << "The actual information of this car is:\n";
+        cout << "Battery: " << batteryCapacity_584 << " kW\n";
+        cout << "Fuel: " << fuelCapacity_584 << " liters\n";
+        cout << "Current mode: " << mode_584 << endl;
     }
 };
 
-// Main function
 int main() {
-    cout << "🔹 Hybrid Car System Simulation 🔹" << endl;
-
-    HybridCar hybrid(50.0, 30.0, "Electric");
-    hybrid.displayStatus();
-
-    cout << "------------------------------------------" << endl;
-
-    hybrid.drive(100); // Drive in Electric mode
-    hybrid.switchMode("Fuel");
-    hybrid.drive(200); // Drive in Fuel mode
-    hybrid.chargeBattery(10); // Charge battery
-    hybrid.refuel(10); // Refuel tank
-    hybrid.switchMode("Electric");
-    hybrid.drive(50); // Drive again in Electric mode
-
-    cout << "------------------------------------------" << endl;
-    hybrid.displayStatus(); // Display final status
-
-    return 0;
+    cout << "----------------- Simulation ------------------\n";
+    HybridCar_584 R1_584(100, 100, "Electric");
+    R1_584.drive_584(200);
+    R1_584.switchMode_584("Fuel");
+    R1_584.drive_584(100);
+    R1_584.chargeBattery_584(100);
+    R1_584.display_584();
 }

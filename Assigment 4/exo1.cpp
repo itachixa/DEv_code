@@ -1,92 +1,77 @@
 #include <iostream>
 using namespace std;
 
-// Base class: BankAccount
-class BankAccount {
+class BankAccount_584 {
 protected:
-    string accountNumber;
-    double balance;
+    string accountNumber_584;
+    double balance_584;
 
 public:
-    BankAccount(string accNum, double bal) : accountNumber(accNum), balance(bal) {}
+    BankAccount_584(string accNum_584, double bal_584) : accountNumber_584(accNum_584), balance_584(bal_584) {}
 
-    void deposit(double amount) {
-        balance += amount;
-        cout << "Deposited: $" << amount << " | New Balance: $" << balance << endl;
+    void deposit_584(double amount_584) {
+        balance_584 += amount_584;
+        cout << "Deposited: $" << amount_584 << " | New Balance: $" << balance_584 << endl;
     }
 
-    virtual void withdraw(double amount) = 0; // Pure virtual function
+    virtual void withdraw_584(double amount_584) = 0;
 
-    void displayBalance() const {
-        cout << "Account Number: " << accountNumber << " | Balance: $" << balance << endl;
+    void displayBalance_584() const {
+        cout << "Account Number: " << accountNumber_584 << " | Balance: $" << balance_584 << endl;
     }
 
-    double getBalance() const { return balance; }
+    double getBalance_584() const { return balance_584; }
 };
 
-// Derived class: SavingsAccount
-class SavingsAccount : public BankAccount {
+
+class SavingsAccount_584 : public BankAccount_584 {
 private:
-    double interestRate;
+    double interestRate_584;
 
 public:
-    SavingsAccount(string accNum, double bal, double rate)
-        : BankAccount(accNum, bal), interestRate(rate) {}
+    SavingsAccount_584(string accNum_584, double bal_584, double rate_584)
+        : BankAccount_584(accNum_584, bal_584), interestRate_584(rate_584) {}
 
-    void applyInterest() {
-        double interest = balance * (interestRate / 100);
-        balance += interest;
-        cout << "Interest Applied: $" << interest << " | New Balance: $" << balance << endl;
+    void applyInterest_584() {
+        double interest_584 = balance_584 * (interestRate_584 / 100);
+        balance_584 += interest_584;
+        cout << "Interest Applied: $" << interest_584 << " | New Balance: $" << balance_584 << endl;
     }
 
-    void withdraw(double amount) override {
-        if (amount > balance) {
+    void withdraw_584(double amount_584) override {
+        if (amount_584 > balance_584) {
             cout << "Insufficient balance! Withdrawal failed." << endl;
         } else {
-            balance -= amount;
-            cout << "Withdrawn: $" << amount << " | New Balance: $" << balance << endl;
+            balance_584 -= amount_584;
+            cout << "Withdrawn: $" << amount_584 << " | New Balance: $" << balance_584 << endl;
         }
     }
 };
 
-// Derived class: CurrentAccount
-class CurrentAccount : public BankAccount {
+class CurrentAccount_584 : public BankAccount_584 {
 private:
-    double overdraftLimit;
+    double overdraftLimit_584;
 
 public:
-    CurrentAccount(string accNum, double bal, double limit)
-        : BankAccount(accNum, bal), overdraftLimit(limit) {}
+    CurrentAccount_584(string accNum_584, double bal_584, double limit_584)
+        : BankAccount_584(accNum_584, bal_584), overdraftLimit_584(limit_584) {}
 
-    void withdraw(double amount) override {
-        if (amount > balance + overdraftLimit) {
+    void withdraw_584(double amount_584) override {
+        if (amount_584 > balance_584 + overdraftLimit_584) {
             cout << "Overdraft limit exceeded! Withdrawal failed." << endl;
         } else {
-            balance -= amount;
-            cout << "Withdrawn: $" << amount << " | New Balance: $" << balance << endl;
+            balance_584 -= amount_584;
+            cout << "Withdrawn: $" << amount_584 << " | New Balance: $" << balance_584 << endl;
         }
     }
 };
 
-// Main Function
 int main() {
-    cout << "🔹 Banking System Simulation 🔹" << endl;
-
-    // Creating a Savings Account
-    SavingsAccount savings("SA12345", 1000.0, 5.0);
-    savings.deposit(500);
-    savings.applyInterest();
-    savings.withdraw(200);
-    savings.displayBalance();
-
-    cout << "------------------------------------------" << endl;
-
-    // Creating a Current Account
-    CurrentAccount current("CA67890", 500.0, 300.0);
-    current.deposit(200);
-    current.withdraw(900);
-    current.withdraw(200);
-    current.displayBalance();
-
+   
+    SavingsAccount_584 savings_584("SA12345", 1000.0, 5.0);
+    savings_584.deposit_584(500);
+    savings_584.applyInterest_584();
+    savings_584.withdraw_584(200);
+    savings_584.displayBalance_584();
     return 0;
 }
