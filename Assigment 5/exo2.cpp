@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class Loan; // Forward declaration
-
+class Loan; 
 class BankAccount {
 private:
     double balance;
@@ -28,8 +27,8 @@ bool isEligibleForLoan(const BankAccount &acc, const Loan &loan) {
 }
 
 int main() {
-    BankAccount customer(2000); // Solde de 2000
-    Loan loan(1500); // Demande de prêt de 1500
+    BankAccount customer(2000); 
+    Loan loan(1500); 
 
     if (isEligibleForLoan(customer, loan)) {
         cout << "Loan Approved!" << endl;
